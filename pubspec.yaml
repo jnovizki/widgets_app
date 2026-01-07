@@ -2,11 +2,14 @@ name: widgets_app
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
+repository: https://github.com/Klerith/animate_do_package
+issue_tracker: https://github.com/Klerith/animate_do_package/issues
 
 environment:
   sdk: ^3.9.2
 
 dependencies:
+  animate_do: ^4.2.0
   flutter:
     sdk: flutter
   go_router: ^16.2.4

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:animate_do/animate_do.dart';
 
 class SlideInfo {
   final String title;
@@ -88,12 +89,14 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
               ? Positioned(
                   bottom: 39,
                   right: 30,
-
-                    child: FilledButton(
-                      onPressed: () {
-                        context.pop();
-                      },
-                      child: Text('Comenzar'),
+                    child:  
+                    FadeInLeft(duration: Duration(seconds: 2),
+                      child: FilledButton(
+                        onPressed: () {
+                          context.pop();
+                        },
+                        child: Text('Comenzar'),
+                      ),
                     ),
                   )
               : SizedBox(),
