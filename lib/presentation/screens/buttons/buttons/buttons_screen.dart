@@ -51,22 +51,21 @@ class _ButtonsView extends StatelessWidget {
 
             TextButton(onPressed: () {}, child: Text("Text")),
 
-            TextButton.icon(onPressed: () {}, icon:Icon(Icons.account_box_outlined), label: Text("Text Icon")),
+            TextButton.icon(onPressed: () {}, icon: Icon(Icons.account_box_outlined), label: Text("Text Icon")),
 
             const CustomButton(),
 
-            IconButton(onPressed: (){}, icon: Icon(Icons.app_registration_rounded)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.app_registration_rounded)),
 
-            IconButton(onPressed: (){}, 
-            icon: Icon(Icons.app_registration_rounded),
-            style:ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll(colors.primary),
-              iconColor: WidgetStatePropertyAll(Colors.white),
-            )
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.app_registration_rounded),
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(colors.primary),
+                iconColor: WidgetStatePropertyAll(Colors.white),
+              ),
             ),
           ],
-          
-
         ),
       ),
     );
@@ -74,24 +73,23 @@ class _ButtonsView extends StatelessWidget {
 }
 
 class CustomButton extends StatelessWidget {
-    const CustomButton({super.key});
+  const CustomButton({super.key});
 
-    @override
-    Widget build(BuildContext context) {
-      final colors = Theme.of(context).colorScheme;
-      return ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Material(
-          color: Colors.grey,
-          child: InkWell(
-            
-            onTap: (){},
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text('Hola Mundo',style: TextStyle(color:Colors.white)),
-            ),
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+        color: Colors.grey,
+        child: InkWell(
+          onTap: () {},
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text('Hola Mundo', style: TextStyle(color: Colors.white)),
           ),
         ),
-      );
-    }
+      ),
+    );
   }
+}
