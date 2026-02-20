@@ -16,7 +16,7 @@ class AppTheme {
   final int selectedColor;
   final bool isDarkMode;
 
-  AppTheme({this.selectedColor = 9, this.isDarkMode = false})
+  AppTheme({this.selectedColor = 0, this.isDarkMode = false})
     : assert(selectedColor >= 0, 'Selected color must be greater than 0'),
       assert(selectedColor < colorList.length, 'Selected color must be less than ${colorList.length}');
 
@@ -26,4 +26,9 @@ class AppTheme {
     colorSchemeSeed: colorList[selectedColor],
     appBarTheme: AppBarTheme(centerTitle: false),
   );
+
+
+  //copyWith permite copiar un objeto y modificar solo algunos de sus campos, manteniendo el resto igual. Es útil para mantener la inmutabilidad.
+  AppTheme copyWith(int? selectedColor, bool? isDarkMode) => 
+  AppTheme(selectedColor: selectedColor ?? this.selectedColor, isDarkMode: isDarkMode ?? this.isDarkMode);
 }
